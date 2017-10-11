@@ -7,7 +7,7 @@ import { DetalladaComponent } from './detallada/detallada.component';
 import { CarritoComponent } from './carrito/carrito.component';
 
 const routes: Routes = [
-  { path: '', component: PrincipalComponent},
+  { path: 'principal', component: PrincipalComponent},
   { path: 'elcarrito', component: CarritoComponent},
   { path: 'logearse', component: LogeoComponent}
 

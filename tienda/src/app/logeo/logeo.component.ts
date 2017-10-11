@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuComponent } from './menu/menu.component';
 
 @Component({
   selector: 'logeo',
@@ -7,9 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LogeoComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit() {
+  enviarForm(form){
+         
   }
 
 }
