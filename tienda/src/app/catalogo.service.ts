@@ -9,13 +9,13 @@ export class CatalogoService {
   constructor(private catalogo:Http) { }
 
   getDatos(){
-  	return this.catalogo.get('https://project-6495366088438134387.firebaseio.com/productos.json')
+  	return this.catalogo.get('https://proyecto-final-bd.firebaseio.com/.json')
   	.map((response: Response)=> response.json())
   }
 
   sendDatos(item: Item){
   	let datos=JSON.stringify(item);
-  	return this.catalogo.post('https://project-6495366088438134387.firebaseio.com/shoppingcar.json',datos)
+  	return this.catalogo.post('https://carrito-8e5b3.firebaseio.com/.json',datos)
   	.map((response: Response)=>response.json())
   }
 

@@ -19,8 +19,7 @@ export class SinginComponent implements OnInit {
 
     onSignin() {
       this.authService.signinUser(this.myForm.value);
-      this.router.navigate(['/catalogo']);
-      
+       
     }
 
     ngOnInit():any {
