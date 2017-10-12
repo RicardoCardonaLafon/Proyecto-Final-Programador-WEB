@@ -1,10 +1,10 @@
-import { TiendaPage } from './app.po';
+import { TiendaAngular2Page } from './app.po';
 
-describe('tienda App', function() {
-  let page: TiendaPage;
+describe('tienda-angular2 App', function() {
+  let page: TiendaAngular2Page;
 
   beforeEach(() => {
-    page = new TiendaPage();
+    page = new TiendaAngular2Page();
   });
 
   it('should display message saying app works', () => {

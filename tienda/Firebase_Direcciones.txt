@@ -1,5 +1,0 @@
-Productos
-https://proyecto-final-bd.firebaseio.com/
-Usuarios
-https://usuarios-45d70.firebaseio.com/
-admin@mail.com 12345

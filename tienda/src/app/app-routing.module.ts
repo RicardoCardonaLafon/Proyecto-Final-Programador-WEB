@@ -1,21 +1,29 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { MenuComponent } from './menu/menu.component';
-import { LogeoComponent } from './logeo/logeo.component';
-import { PrincipalComponent } from './principal/principal.component';
-import { DetalladaComponent } from './detallada/detallada.component';
-import { CarritoComponent } from './carrito/carrito.component';
+
+import {Component} from '@angular/core';
+
+import { SingupComponent } from "./singup/singup.component";
+import { SinginComponent } from "./singin/singin.component";
+import { CatalogoComponent } from "./catalogo/catalogo.component";
+import { DescripcionComponent } from "./descripcion/descripcion.component";
+import { ItemcarComponent } from "./itemcar/itemcar.component";
+
+import { AuthGuard } from "./auth.guard";
 
 const routes: Routes = [
-  { path: 'principal', component: PrincipalComponent},
-  { path: 'elcarrito', component: CarritoComponent},
-  { path: 'logearse', component: LogeoComponent}
-
+  	{ path: '', redirectTo: 'singin', pathMatch: 'full' },
+	{ path: 'singup', component: SingupComponent },
+	{ path: 'singin', component: SinginComponent },
+	{ path: 'catalogo', component: CatalogoComponent },
+	{ path: 'descripcion/:id', component: DescripcionComponent },
+	{ path: 'itemcar', component: ItemcarComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
-  providers: []
+  providers: [AuthGuard]
 })
-export class RutasTienda { }
+export class AppRoutingModule { }
+                                                                                                                                                                     

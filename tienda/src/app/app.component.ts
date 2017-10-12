@@ -1,15 +1,23 @@
-import { Component } from '@angular/core';
-import { MenuComponent } from './menu/menu.component';
-import { LogeoComponent } from './logeo/logeo.component';
-import { CarritoComponent } from './carrito/carrito.component';
-import { DetalladaComponent } from './detallada/detallada.component';
-import { PrincipalComponent } from './principal/principal.component';
+import { Component, OnInit } from '@angular/core';
+import { DataService } from './data.service';
+import { DataitemcarService } from './dataitemcar.service'; 
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
-})
-export class AppComponent {
+  styleUrls: ['./app.component.css'],
   
+})
+export class AppComponent implements OnInit{
+
+  constructor(private dataService: DataService, private dataItemCar:DataitemcarService) {  
+    dataService.initData();
+    dataItemCar.initDataCar();
+  }
+
+  ngOnInit() {
+    this.dataItemCar.initDataCar();
+  }
+
+ 
 }
